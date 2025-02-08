@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VERIFICA_NOVEMBRE_DIMASI", "VERIFICA_NOVEMBRE_DIMASI\VERIFICA_NOVEMBRE_DIMASI.csproj", "{45F86A4A-ABBE-4CE4-B4A7-169A95DC0641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST_VERIFICA_NOVEMBRE_DIMASI", "TEST_VERIFICA_NOVEMBRE_DIMASI\TEST_VERIFICA_NOVEMBRE_DIMASI.csproj", "{145A8BCE-510B-4904-9049-93F138ECF38D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45F86A4A-ABBE-4CE4-B4A7-169A95DC0641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45F86A4A-ABBE-4CE4-B4A7-169A95DC0641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45F86A4A-ABBE-4CE4-B4A7-169A95DC0641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45F86A4A-ABBE-4CE4-B4A7-169A95DC0641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145A8BCE-510B-4904-9049-93F138ECF38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145A8BCE-510B-4904-9049-93F138ECF38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145A8BCE-510B-4904-9049-93F138ECF38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145A8BCE-510B-4904-9049-93F138ECF38D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {193054F7-07B2-4700-9952-B99BCCBE5C2A}
+	EndGlobalSection
+EndGlobal

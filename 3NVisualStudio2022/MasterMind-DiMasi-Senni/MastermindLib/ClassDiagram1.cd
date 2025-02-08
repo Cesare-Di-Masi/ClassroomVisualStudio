@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Generatore del messaggio, non attivo se si gioca contro il giocatore poichè il codice è deciso da quest'ultimo.">
+    <Position X="6.792" Y="0.542" Height="0.99" Width="2.065" />
+  </Comment>
+  <Class Name="MastermindLib.GameManager">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <AssociationLine Name="Colours" Type="MastermindLib.Colours" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.938" />
+        <Point X="3.874" Y="2.938" />
+        <Point X="3.874" Y="2.935" />
+        <Point X="4.125" Y="2.935" />
+        <Point X="4.125" Y="5.447" />
+        <Point X="5.25" Y="5.447" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABIAADAKgAAAAAJIAAAAAAAAAAAAACgBIAUAAAAEEAk=</HashCode>
+      <FileName>GameManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Colours" />
+      <Property Name="CodeGenerator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MastermindLib.CodeGenerator">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAAAAIIAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Bot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="MastermindLib.Colours">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAARAAAIAAhAACBAAxAAAAAAAAACACAAEADABAIE=</HashCode>
+      <FileName>Colours.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

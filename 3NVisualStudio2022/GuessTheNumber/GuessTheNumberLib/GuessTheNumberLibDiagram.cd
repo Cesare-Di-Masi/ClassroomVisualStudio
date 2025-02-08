@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GuessTheNumberLib.GameManager">
+    <Position X="4.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAQAAgAAAAEAAAAQAAAAAAAAAACAAAAAAAAAAAE=</HashCode>
+      <FileName>GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GuessTheNumberLib.Result">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Result.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

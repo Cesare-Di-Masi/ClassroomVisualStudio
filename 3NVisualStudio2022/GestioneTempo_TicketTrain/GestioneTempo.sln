@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTimeManagement", "ConsoleTimeManagement\ConsoleTimeManagement.csproj", "{88DD4272-DDD3-4C1F-B412-C7ECE4609810}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainLib", "TrainLib\TrainLib.csproj", "{3C901D55-71CF-404D-8D62-CFCA624550C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88DD4272-DDD3-4C1F-B412-C7ECE4609810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DD4272-DDD3-4C1F-B412-C7ECE4609810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DD4272-DDD3-4C1F-B412-C7ECE4609810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DD4272-DDD3-4C1F-B412-C7ECE4609810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF1DF0C2-AE9D-4F6F-8737-F64368E1E3B2}
+	EndGlobalSection
+EndGlobal

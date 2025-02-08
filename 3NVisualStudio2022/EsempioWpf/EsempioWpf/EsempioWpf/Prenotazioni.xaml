@@ -1,0 +1,18 @@
+﻿<Window x:Class="EsempioWpf.Prenotazioni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EsempioWpf"
+        mc:Ignorable="d"
+        Title="Prenotazioni" Height="450" Width="800" Background="#FF009CFF">
+    <Grid>
+        <Label x:Name="lblNomeRistorante" Content="ristorante"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="800" />
+        <Label x:Name="lblTavoliLiberi" Content="Coperti liberi" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="400" />
+        <Label x:Name="lblCopertiLiberi" Content="Tavoli liberi" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Width="400" />
+        <Label x:Name="lblTavoliOccupati" Content="Tavoli occupati" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" />
+        <Label x:Name="lblPrenotazione" Content="Inserire il numero di posti" HorizontalAlignment="Left" Margin="0,152,0,0" VerticalAlignment="Top" Height="33" Width="158" />
+        <TextBox x:Name="txtPrendiPrenotazione" HorizontalAlignment="Left" Margin="176,152,0,0" TextWrapping="Wrap" Text="1-4" VerticalAlignment="Top" Width="140" Height="33" GotFocus="DeleteContent" LostFocus="txtPrendiPrenotazioniRewriteText" />
+        <Button x:Name="btnConfermaPrenotazione" Content="Conferma Prenotazione" HorizontalAlignment="Left" Margin="246,256,0,0" VerticalAlignment="Top" Height="95" Width="214" FontSize="14" FontFamily="Arial Black" FontWeight="Bold" Click="btnConfermaPrenotazione_Click" />
+    </Grid>
+</Window>

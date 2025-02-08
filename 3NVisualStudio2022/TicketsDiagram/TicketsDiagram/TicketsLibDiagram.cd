@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TicketsDiagram.Ticket">
+    <Position X="0.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAgQIBAAAAAAAAAYAMAAACCBAIAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ticket.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TickectStatus" />
+      <Property Name="TicketHolder" />
+      <Property Name="Vehicle1" />
+      <Property Name="Policeman" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketsDiagram.Vehicle">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQABgAAAA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TicketHolder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketsDiagram.TicketHolder">
+    <Position X="13.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQABAAACAACAAAAAAAgAAA=</HashCode>
+      <FileName>TicketHolder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Address" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketsDiagram.PoliceStation">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAAAAQAACBQAAAAAAAAIAAAACAAAAAAACCAA=</HashCode>
+      <FileName>PoliceStation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ticket" />
+      <Property Name="Policeman" />
+      <Property Name="Address" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketsDiagram.Address">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketsDiagram.Policeman">
+    <Position X="12.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Policeman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="TicketsDiagram.TickectStatus">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAgAAAAAAAAQAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>TickectStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
