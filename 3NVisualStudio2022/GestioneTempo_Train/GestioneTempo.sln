@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTimeManagement", "TestT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTimeManagement", "ConsoleTimeManagement\ConsoleTimeManagement.csproj", "{88DD4272-DDD3-4C1F-B412-C7ECE4609810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainLib", "TrainLib\TrainLib.csproj", "{3C901D55-71CF-404D-8D62-CFCA624550C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainLib", "TrainLib\TrainLib.csproj", "{3C901D55-71CF-404D-8D62-CFCA624550C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTrain", "TestTrain\TestTrain.csproj", "{90BACD70-E2C0-46E7-85D5-CB443BCD68D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C901D55-71CF-404D-8D62-CFCA624550C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90BACD70-E2C0-46E7-85D5-CB443BCD68D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90BACD70-E2C0-46E7-85D5-CB443BCD68D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90BACD70-E2C0-46E7-85D5-CB443BCD68D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90BACD70-E2C0-46E7-85D5-CB443BCD68D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

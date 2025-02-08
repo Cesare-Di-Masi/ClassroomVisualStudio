@@ -17,7 +17,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>ABIAADAKgAAAAAJIAAAAAAAAAAAAACgBIAUAAAAEEAk=</HashCode>
-      <FileName>GameManager.cs</FileName>
+      <FileName>MastermindGame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Colours" />

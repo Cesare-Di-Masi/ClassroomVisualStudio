@@ -15,21 +15,15 @@ namespace TrisProject
                 {
                     Console.WriteLine(tris);
                     Console.WriteLine($"It's {(currentPlayer ? "X" : "O")} turn ");
-                    Console.WriteLine("Insert The X coord");
+                    Console.WriteLine("Inserire la coordinata della riga");
                     int readX = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Insert The Y coord");
+                    Console.WriteLine("Insere la coordinata della colonna ");
                     int readY = int.Parse(Console.ReadLine());
                     bool turn = tris.makeATurn(readX, readY, currentPlayer);
-                    moves++;
                     if (turn)
                     {
                         Console.WriteLine($"{(currentPlayer ? "X" : "O")} ha vinto");
                         gameWon = true;
-                    }
-                    else if(moves==9)
-                    {
-                        
-                        Console.WriteLine("Pareggio");
                     }
                     else
                     {
@@ -42,9 +36,17 @@ namespace TrisProject
                     Console.WriteLine("riprova, hai sbagliato qualcosa");
                 }
                 
+                
             }
         }
     }
 }
 
 
+/*
+ parcheggio cursori 
+ 
+  
+
+
+ * */

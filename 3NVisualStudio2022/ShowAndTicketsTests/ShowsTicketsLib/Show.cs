@@ -94,7 +94,7 @@ namespace ShowsTicketsLib
                 if (seatList[i] <= 0 || seatList[i] > TicketList.Length || TicketList[seatList[i]-1].IsSold == true) throw new ArgumentOutOfRangeException("illegal wanted seat");
             }
 
-            for(int i = 0;i < seatList.Length; i++)
+            for(int i = 0;i < TicketList.Length; i++)
             {
                 TicketList[seatList[i]-1].IsSold=true;
             }

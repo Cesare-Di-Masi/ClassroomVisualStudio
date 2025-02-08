@@ -27,8 +27,9 @@ namespace TrisLib
             {
                 Matrix[coordY-1, coordX-1] = false;
             }
-            if (CheckWin(isX)) return true; 
-            else return false;
+            string player;
+            if (isX) player = "X"; else player = "O";
+            if (CheckWin(isX)) return true; else return false;
 
         }
 
@@ -53,40 +54,9 @@ namespace TrisLib
             }
         }
 
-        private bool CheckWin(bool player)
-        {
-            //faccio un array comprensivo di tutte le combinazioni possibili
-            int[][,] winningCombinations =
-            {
-                new int[,] { { 0, 0 }, { 0, 1 }, { 0, 2 } },
-                new int[,] { { 1, 0 }, { 1, 1 }, { 1, 2 } },
-                new int[,] { { 2, 0 }, { 2, 1 }, { 2, 2 } },
-                new int[,] { { 0, 0 }, { 1, 0 }, { 2, 0 } },
-                new int[,] { { 0, 1 }, { 1, 1 }, { 2, 1 } },
-                new int[,] { { 0, 2 }, { 1, 2 }, { 2, 2 } },
-                new int[,] { { 0, 0 }, { 1, 1 }, { 2, 2 } },
-                new int[,] { { 2, 0 }, { 1, 1 }, { 0, 2 } }
-            };
-
-            //ciclo le combinazione
-            foreach (var combination in winningCombinations)
-            {
-                if (Matrix[combination[0, 0], combination[0, 1]] == player &&
-                    Matrix[combination[1, 0], combination[1, 1]] == player &&
-                    Matrix[combination[2, 0], combination[2, 1]] == player)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-
-        }
-
 
         public override string ToString()
         {
-            //stampa della tabella
             string stringone;
             stringone =
             ("   1  |  2  |  3  \n") +
@@ -101,33 +71,93 @@ namespace TrisLib
             ("      |     |     ");
             return stringone;
         }
+
+
+
+
+
+
+        private bool CheckWin(bool player)
+        {
+            bool? firstBox = null;
+            bool secondBox = false;
+            
+
+            for (int i = 0; i < 3; i++)
+            {
+                firstBox = Matrix[i,0];
+                for (int j = 0; j < 3; j++)
+                {
+                    if (firstBox == Matrix[i, j] && firstBox!=null) 
+                    {
+                        secondBox = true;
+                    }
+
+                    if (firstBox == Matrix[i, j] && secondBox)
+                        return true;
+                    
+
+                }
+
+            }
+
+            secondBox = false;
+            for (int i = 0; i < 3; i++)
+            {
+                firstBox = Matrix[0, i];
+                for (int j = 0; j < 3; j++)
+                {
+                    if (firstBox == Matrix[j, i] && firstBox != null)
+                    {
+                        secondBox = true;
+                    }
+
+                    if (firstBox == Matrix[j, i] && secondBox)
+                        return true;
+                }
+
+            }
+
+            if ((Matrix[0, 0] == Matrix[1, 1] == Matrix[2, 2]) && Matrix[0,0] == player||
+                (Matrix[2, 0] == Matrix[1, 1] == Matrix[0, 2]) && Matrix[2,0] == player) 
+            {
+                return true;
+            }
+                  
+            return false;
+
+        }
+
+
+
+
+
+
     }
 }
 /*
- * public Player CheckWin(bool currentPlayer)
-    {
-        int[][] winningCombinations = new int[][]
-        {
-            new int[] {0, 1, 2}, // Riga 1
-            new int[] {3, 4, 5}, // Riga 2
-            new int[] {6, 7, 8}, // Riga 3
-            new int[] {0, 3, 6}, // Colonna 1
-            new int[] {1, 4, 7}, // Colonna 2
-            new int[] {2, 5, 8}, // Colonna 3
-            new int[] {0, 4, 8}, // Diagonale principale
-            new int[] {2, 4, 6}  // Diagonale secondaria
-        };
-
-        foreach (var combination in winningCombinations)
-        {
-            if (board[combination[0]] == currentPlayer &&
-                board[combination[1]] == currentPlayer &&
-                board[combination[2]] == currentPlayer)
+ * int[][,] winningCombinations =
             {
-                return currentPlayer;
-            }
-        }
+                new int[,] { { 0, 0 }, { 0, 1 }, { 0, 2 } },
+                new int[,] { { 1, 0 }, { 1, 1 }, { 1, 2 } },
+                new int[,] { { 2, 0 }, { 2, 1 }, { 2, 2 } },
+                new int[,] { { 0, 0 }, { 1, 0 }, { 2, 0 } },
+                new int[,] { { 0, 1 }, { 1, 1 }, { 2, 1 } },
+                new int[,] { { 0, 2 }, { 1, 2 }, { 2, 2 } },
+                new int[,] { { 0, 0 }, { 1, 1 }, { 2, 2 } },
+                new int[,] { { 2, 0 }, { 1, 1 }, { 0, 2 } }
+            };
 
-        return Player.None;
+            foreach (var combination in winningCombinations)
+            {
+                if (Matrix[combination[0, 0], combination[0, 1]] == player &&
+                    Matrix[combination[1, 0], combination[1, 1]] == player &&
+                    Matrix[combination[2, 0], combination[2, 1]] == player)
+                {
+                    return true;
+                }
+            }
+
+            return false;
     }
  * */
