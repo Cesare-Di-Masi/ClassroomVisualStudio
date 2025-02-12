@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VERIFICA_GENNAIO_DIMASI", "VERIFICA_GENNAIO_DIMASI\VERIFICA_GENNAIO_DIMASI.csproj", "{E7C741BF-470D-49C4-9449-F71A73996A4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VERIFICA_GENNAIO_DIMASI_LIB", "VERIFICA_GENNAIO_DIMASI_LIB\VERIFICA_GENNAIO_DIMASI_LIB.csproj", "{F2B9776B-0248-41AF-B76C-0E24750963F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7C741BF-470D-49C4-9449-F71A73996A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C741BF-470D-49C4-9449-F71A73996A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C741BF-470D-49C4-9449-F71A73996A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C741BF-470D-49C4-9449-F71A73996A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B9776B-0248-41AF-B76C-0E24750963F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B9776B-0248-41AF-B76C-0E24750963F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B9776B-0248-41AF-B76C-0E24750963F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B9776B-0248-41AF-B76C-0E24750963F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E85C47EC-5EE4-4401-AEB1-A8586BA956F7}
+	EndGlobalSection
+EndGlobal
