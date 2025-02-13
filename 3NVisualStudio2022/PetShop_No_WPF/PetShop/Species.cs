@@ -8,13 +8,14 @@ namespace PetShopLib
 {
     public enum Species
     {
-        CAT,
-        DOG,
-        BIRD,
-        FISH,
+        Cat,
+        Dog,
+        Bird,
+        Fish,
         Guinea_Pig,
         Snake,
         Lizard,
-        Hamster
+        Hamster,
+        Dugong
     }
 }

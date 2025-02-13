@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PetShopLib
 {
-    public class Order
+    public class Order : IComparable<Order>
     {
         private Customer _customer;
         private List<Pet> _petList;
@@ -44,8 +44,7 @@ namespace PetShopLib
 
         public Order(Customer customer, List<Pet> petList, DateTime dateOfCreationOfTheOrder)
         {
-
-            for(int i=0; i<petList.Count; i++)
+            for (int i = 0; i < petList.Count; i++)
             {
                 if (petList[i].PetState == PetState.Sold)
                     throw new ArgumentException("an animal as been already sold");
@@ -53,29 +52,38 @@ namespace PetShopLib
                     petList[i].BuyPet(customer);
             }
 
+            customer.addListOfPets(petList);
+
             _customer = customer;
             _petList = petList;
             _dateOfCreationOfTheOrder = dateOfCreationOfTheOrder;
         }
 
-
         public override bool Equals(object? obj)
         {
-            if(obj == null || !(obj is Order)) return false;
+            if (obj == null || !(obj is Order)) return false;
 
             Order other = (Order)obj;
 
             bool eq = true;
 
-            for (int i = 0; i < _petList.Count; i++) 
+            for (int i = 0; i < _petList.Count; i++)
             {
                 if (!(other.PetList[i].Equals(PetList[i])))
                     eq = false;
             }
 
-            if(other.Customer.Equals(Customer) && eq == true && other.TotPrice == TotPrice ) return true;
+            if (other.Customer.Equals(Customer) && eq == true && other.TotPrice == TotPrice) return true;
             return false;
         }
 
+        public int CompareTo(Order? other)
+        {
+            if (other == null) return 1;
+
+            Order order = other as Order;
+
+            return DateOfCreationOfTheOrder.CompareTo(order.DateOfCreationOfTheOrder);
+        }
     }
 }

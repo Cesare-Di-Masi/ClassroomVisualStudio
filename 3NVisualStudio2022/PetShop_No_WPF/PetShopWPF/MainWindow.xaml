@@ -1,0 +1,15 @@
+﻿<Window x:Class="PetShopWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetShopWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="txtInsertPetShopName">
+        <Label x:Name="lblTitlePetShopCreator" Content="WELCOME TO PET-SHOP MANAGER" HorizontalAlignment="Center" VerticalAlignment="Top" Height="49" Width="393" FontSize="22" FontWeight="Bold" />
+        <Label x:Name="lblInsertShopName" Content="Insert Your Shop Name " HorizontalAlignment="Center" Margin="0,109,0,0" VerticalAlignment="Top" FontSize="18" />
+        <TextBox x:Name="txtInsertPetShopName1" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" Text="Inserisci il nome del negozio" VerticalAlignment="Top" Width="232" GotFocus="RemoveContent" />
+        <Button x:Name="btnConfirmPetShop" Content="Confirm" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" Height="84" Width="232" Background="#FF7E03FF" BorderBrush="White" FontWeight="Bold" FontSize="20" Click="btnConfirmPetShop_Click" />
+    </Grid>
+</Window>

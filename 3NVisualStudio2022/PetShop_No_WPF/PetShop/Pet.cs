@@ -2,9 +2,8 @@
 
 namespace PetShop
 {
-    public class Pet
+    public class Pet : IComparable<Pet>
     {
-
         private string _name;
         private Species _species;
         private int _age;
@@ -15,17 +14,15 @@ namespace PetShop
 
         public string Name
         {
-
             get
             {
                 return _name;
             }
             set
             {
-                if(String.IsNullOrWhiteSpace(value)) throw new ArgumentNullException("illegal pet name");
+                if (String.IsNullOrWhiteSpace(value)) throw new ArgumentNullException("illegal pet name");
                 _name = value;
             }
-
         }
 
         public Species Species
@@ -40,7 +37,7 @@ namespace PetShop
 
         public int Age
         {
-            get 
+            get
             {
                 return DateTime.Today.Year - Birthday.Year;
             }
@@ -74,7 +71,7 @@ namespace PetShop
             get { return _petState; }
         }
 
-        public Pet(string name, Species species, DateTime birthday, double price )
+        public Pet(string name, Species species, DateTime birthday, double price)
         {
             Name = name;
             _species = species;
@@ -82,13 +79,13 @@ namespace PetShop
             Price = price;
         }
 
-        public Pet(string name, Species species, DateTime birthday, double price, Customer customer):this(name,species,birthday,price)
+        public Pet(string name, Species species, DateTime birthday, double price, Customer customer) : this(name, species, birthday, price)
         {
             _customer = customer;
             _petState = PetState.Sold;
         }
 
-        public void BuyPet( Customer customer)
+        public void BuyPet(Customer customer)
         {
             if (_petState != PetState.Purchasable)
                 throw new ArgumentException($"cannot buy the pet in this state {_petState}");
@@ -101,19 +98,45 @@ namespace PetShop
             _petState = PetState.Decesead;
         }
 
+        public override string ToString()
+        {
+            return $"{Species} : {Name} - {Age} years -- {Price}€";
+        }
+
         public override bool Equals(object? obj)
         {
-            
-            if(!(obj is Pet)|| obj ==null) return false;
+            if (!(obj is Pet) || obj == null) return false;
 
             Pet other = obj as Pet;
 
             if (other.Name == Name && other.Species == Species && other.Birthday == Birthday && other.Price == Price && other.Customer.Equals(Customer))
                 return true;
             return false;
-
         }
 
+        public int CompareTo(Pet? other)
+        {
+            if (other == null) return 1;
 
+            Pet pet = other as Pet;
+
+            if (Species.CompareTo(pet.Species) == 1)
+            {
+                return 1;
+            }
+            else if (Species.CompareTo(pet.Species) == 0)
+            {
+                if (Name.CompareTo(pet.Name) == 1)
+                {
+                    return 1;
+                }
+                else if (Name.CompareTo(pet.Name) == 0)
+                {
+                    return 0;
+                }
+            }
+
+            return -1;
+        }
     }
 }

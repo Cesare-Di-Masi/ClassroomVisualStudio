@@ -69,21 +69,27 @@ namespace PetShopLib
             _boughtPets.Add(pet);
         }
 
+        public void addListOfPets(List<Pet> listOfPets)
+        {
+            for (int i = 0; i < listOfPets.Count; i++)
+            {
+                addPet(listOfPets[i]);
+            }
+        }
+
         public override bool Equals(object? obj)
         {
-            if(!(obj is Customer)|| obj == null) return false;
+            if (!(obj is Customer) || obj == null) return false;
 
             Customer other = (Customer)obj;
 
             if (other.Name == _name && other.Surname == _surname && other.MailAddress.Equals(_mailaddress)) return true;
             return false;
-
         }
 
         public override string ToString()
         {
             return $"{Name} {Surname} mail: {MailAddress.ToString()}";
         }
-
     }
 }
