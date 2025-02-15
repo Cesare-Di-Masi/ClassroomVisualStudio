@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PetShopLib
 {
-    public class PetShop
+    public class PetShopManager
     {
         private List<Pet?> _petList;
         private List<Customer?> _customerList;
@@ -44,7 +44,7 @@ namespace PetShopLib
 
         //costruttore da qui in poi
 
-        private PetShop(string shopName)
+        private PetShopManager(string shopName)
         {
             Name = shopName;
             _petList = null;
@@ -52,20 +52,20 @@ namespace PetShopLib
             _orderList = null;
         }
 
-        private PetShop(string shopName, List<Pet> petList) : this(shopName)
+        private PetShopManager(string shopName, List<Pet> petList) : this(shopName)
         {
             _petList = petList;
             _customerList = null;
             _orderList = null;
         }
 
-        private PetShop(string shopName, List<Pet> petList, List<Customer> customerList) : this(shopName, petList)
+        private PetShopManager(string shopName, List<Pet> petList, List<Customer> customerList) : this(shopName, petList)
         {
             _customerList = customerList;
             _orderList = null;
         }
 
-        private PetShop(string shopName, List<Pet> petList, List<Customer> customerList, List<Order> orderlist) : this(shopName, petList, customerList)
+        private PetShopManager(string shopName, List<Pet> petList, List<Customer> customerList, List<Order> orderlist) : this(shopName, petList, customerList)
         {
             _orderList = orderlist;
 
