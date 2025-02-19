@@ -8,13 +8,33 @@ namespace PetShopLib
 {
     public enum Species
     {
-        CAT,
-        DOG,
-        BIRD,
-        FISH,
-        Guinea_Pig,
-        Snake,
-        Lizard,
-        Hamster
+        Dog,  
+        Cat,  
+        Rabbit,  
+        Guinea_pig,  
+        Hamster,  
+        Ferret,  
+        Hedgehog,  
+        Mouse,  
+        Rat,  
+        Gerbil,  
+        Mini_pig,  
+        Parrot,  
+        Pigeon,  
+        Chicken, 
+        Duck,  
+        Goose,  
+        Turtle,  
+        Tortoise,  
+        Lizard,  
+        Snake,  
+        Frog,  
+        Goldfish,  
+        Koi,  
+        Carp,  
+        Catfish,  
+        Snail,
+        Hermit_crab,
+        Dugong
     }
 }
