@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System.Configuration;
+using System.Data;
+using System.Windows;
 
-namespace MasterMind_DiMasi_Senni
+namespace PetShopWPF
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -8,4 +10,5 @@ namespace MasterMind_DiMasi_Senni
     public partial class App : Application
     {
     }
+
 }

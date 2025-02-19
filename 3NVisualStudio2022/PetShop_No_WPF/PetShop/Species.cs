@@ -8,6 +8,7 @@ namespace PetShopLib
 {
     public enum Species
     {
+<<<<<<< HEAD
         Dog,  
         Cat,  
         Rabbit,  
@@ -35,6 +36,16 @@ namespace PetShopLib
         Catfish,  
         Snail,
         Hermit_crab,
+=======
+        Cat,
+        Dog,
+        Bird,
+        Fish,
+        Guinea_Pig,
+        Snake,
+        Lizard,
+        Hamster,
+>>>>>>> 530fbf98dcf62dad3e1f3692a1708114415acf6e
         Dugong
     }
 }

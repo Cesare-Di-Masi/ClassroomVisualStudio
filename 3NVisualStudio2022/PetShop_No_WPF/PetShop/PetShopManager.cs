@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PetShopLib
 {
-    public class PetShop
+    public class PetShopManager
     {
-        private List<Pet> _petList;
-        private List<Customer> _customerList;
-        private List<Order> _orderList;
+        private List<Pet?> _petList;
+        private List<Customer?> _customerList;
+        private List<Order?> _orderList;
         private string _name;
 
         public string Name
@@ -42,10 +42,43 @@ namespace PetShopLib
             get { return _orderList; }
         }
 
-        PetShop(string shopName, List<Pet> petList, List<Customer> customerList) 
+        //costruttore da qui in poi
+
+        private PetShopManager(string shopName)
         {
             Name = shopName;
+            _petList = null;
+            _customerList = null;
+            _orderList = null;
+        }
+
+        private PetShopManager(string shopName, List<Pet> petList) : this(shopName)
+        {
             _petList = petList;
+            _customerList = null;
+            _orderList = null;
+        }
+
+        private PetShopManager(string shopName, List<Pet> petList, List<Customer> customerList) : this(shopName, petList)
+        {
+            _customerList = customerList;
+            _orderList = null;
+        }
+
+        private PetShopManager(string shopName, List<Pet> petList, List<Customer> customerList, List<Order> orderlist) : this(shopName, petList, customerList)
+        {
+            _orderList = orderlist;
+
+            for (int i = 0; i < orderlist.Count; i++)
+            {
+                for (int j = 0; j < orderlist[i].PetList.Count; j++)
+                {
+                    if (_petList.Contains(orderlist[i].PetList[j]) == false)
+                    {
+                        throw new Exception($"animal {j} in order {i} does not exist in the shop");
+                    }
+                }
+            }
         }
 
         public int totAnimalsNumber()
@@ -152,12 +185,11 @@ namespace PetShopLib
             }
 
             return list;
-
         }
 
         public List<Pet> searchAnimalByPrice(int price)
         {
-            List <Pet> list = new List<Pet>();
+            List<Pet> list = new List<Pet>();
 
             for (int i = 0; i < _petList.Count; i++)
             {
@@ -173,7 +205,7 @@ namespace PetShopLib
         {
             List<Pet> list = new List<Pet>();
 
-            for(int i = 0; i<_petList.Count; i++)
+            for (int i = 0; i < _petList.Count; i++)
             {
                 if (_petList[i].Customer.Equals(customer))
                     list.Add(_petList[i]);
@@ -193,6 +225,5 @@ namespace PetShopLib
 
             return list;
         }
-
     }
 }
