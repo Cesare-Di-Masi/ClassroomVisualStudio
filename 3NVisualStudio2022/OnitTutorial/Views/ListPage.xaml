@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:OnitTutorial"
+             xmlns:models="clr-namespace:OnitTutorial.Models"
+             xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
+             xmlns:views="clr-namespace:OnitTutorial.Views"
+             x:Class="OnitTutorial.Views.ListPage"
+             x:DataType="local:ListViewModel"
+             Title="Lista Pizze">
+
+    <ContentPage.Behaviors>
+        <!--
+        vai a dire alla lista che vada a leggere i dati di quel new model
+        setti nel file C# della lista il riferimento al new model
+        Tramite il BindingContext
+        inoltre nello xaml della lista è necessario aggiungere il data type
+        x:DataType="local:ListViewModel"
+        tutte le volte che vado ad utilizzare binding deve andare a leggere i dati di ListViewModel
+        
+        a tuttu i metodi che hanno [relaycommand] viene leggermente cambiato il nome
+        viene rimosso un eventuale On
+        viene aggiunto Command alla fine 
+        
+        -->
+            <toolkit:EventToCommandBehavior EventName="Appearing"
+                                        Command="{Binding AppearingCommand}"
+                                        />
+        
+    </ContentPage.Behaviors>
+
+    <VerticalStackLayout>
+
+        <Button Text= "AGGIUNGI PIZZA" 
+                Command="{Binding Source={RelativeSource AncestorType={x:Type views:ListPage}},Path=NewOrderCommand}"/>
+
+        <CollectionView ItemsSource="{Binding OrdersList}" >
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate x:DataType="models:PizzaOrderModel">
+
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Ordine n. " FontAttributes="Bold"/>
+                            <Label Text="{Binding Id}" FontAttributes="Bold"/>
+                        </HorizontalStackLayout>
+                        
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="30"/>
+                            </Grid.ColumnDefinitions>
+
+                            <VerticalStackLayout Grid.Column="0">
+                                <!--base-->
+                                <HorizontalStackLayout>
+                                    <Label Text ="Base: "/>
+                                    <Label Text="{Binding Base}"/>
+                                </HorizontalStackLayout>
+                                <!--condimenti-->
+                                
+                                <!--note-->        
+
+                            </VerticalStackLayout>
+
+                            <!--quantità-->
+                            <Label Grid.Column="1" Text="{Binding Quantity}"/>
+
+                            <Button Grid.Column="2" ImageSource="{mi:FontAwesomeSolid Icon=Xmark}"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>
