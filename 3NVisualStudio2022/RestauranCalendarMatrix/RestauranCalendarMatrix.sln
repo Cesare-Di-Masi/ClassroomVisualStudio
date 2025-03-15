@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantCalendarMatrix", "RestauranCalendarMatrix\RestaurantCalendarMatrix.csproj", "{E62B43A4-301F-4069-88F2-3301D99C536B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantCalendarLib", "RestauranCalendarLib\RestaurantCalendarLib.csproj", "{2861E4CD-330D-4F36-ACBD-3CEF4626BA60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E62B43A4-301F-4069-88F2-3301D99C536B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62B43A4-301F-4069-88F2-3301D99C536B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62B43A4-301F-4069-88F2-3301D99C536B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62B43A4-301F-4069-88F2-3301D99C536B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2861E4CD-330D-4F36-ACBD-3CEF4626BA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2861E4CD-330D-4F36-ACBD-3CEF4626BA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2861E4CD-330D-4F36-ACBD-3CEF4626BA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2861E4CD-330D-4F36-ACBD-3CEF4626BA60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B67D08D4-AF71-4998-ADBE-8CA7D49AF099}
+	EndGlobalSection
+EndGlobal

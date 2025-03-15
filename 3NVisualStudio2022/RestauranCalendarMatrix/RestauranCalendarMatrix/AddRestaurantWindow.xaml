@@ -1,0 +1,16 @@
+﻿<Window x:Class="RestaurantCalendarMatrix.AddRestaurantWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantCalendarMatrix"
+        mc:Ignorable="d"
+        Title="AddRestaurantWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="lblAddRestaurant" Content="Aggiungi un ristorante" HorizontalAlignment="Left" Margin="234,26,0,0" VerticalAlignment="Top" Height="82" Width="348" FontSize="22" FontFamily="Arial Black" FontWeight="Bold"/>
+        <TextBox x:Name="txtbboxAddRestaurant" HorizontalAlignment="Left" Margin="257,155,0,0" TextWrapping="Wrap" Text="digitare il nome del ristorante" VerticalAlignment="Top" Width="268" Height="48" FontSize="16" GotFocus="RemovetxtBoxText" LostFocus="RetrievetxtBoxText"/>
+        <Button x:Name="btnAddRestaurant" Content="aggiungi il ristorante" HorizontalAlignment="Left" Margin="257,307,0,0" VerticalAlignment="Top" Height="85" Width="268" FontSize="18" FontWeight="Bold" Click="addRestaurant"/>
+        <Button x:Name="btnReturnToMainWindow" Content="indietro" HorizontalAlignment="Left" Margin="693,10,0,0" VerticalAlignment="Top" Click="ReturnToMainWindow" Height="46" Width="97"/>
+
+    </Grid>
+</Window>
