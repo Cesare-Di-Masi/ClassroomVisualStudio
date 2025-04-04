@@ -46,6 +46,7 @@ namespace VERIFICA_APRILE_DIMASI
             {
                 var errorMessage = MessageBox.Show(ex.ToString(), "qualcosa è andato storto, riprovare");
                 error = true;
+                return;
             }
 
             if (error == false)

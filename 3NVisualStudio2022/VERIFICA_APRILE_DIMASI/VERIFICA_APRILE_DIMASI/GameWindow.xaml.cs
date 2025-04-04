@@ -62,19 +62,19 @@ namespace VERIFICA_APRILE_DIMASI
 
                 if (currGridManager.GameStatus == GameState.PLAYING)//controllo della vittoria
                 {
-                    btn.IsEnabled = false;
+                    btn.Background = Brushes.Red;//colore rosso se non è corretto
+                    btn.IsHitTestVisible = false;//disabilito il bottone
                 } 
                 else if (currGridManager.GameStatus == GameState.WON)
                 {
-                    btn.IsEnabled = false;
-                    btn.Background = null;
-
+                    btn.Background = Brushes.Green;//colore verde se è corretto
+                    btn.IsHitTestVisible = false;//disabilito il bottone
                     MessageBox.Show("YOU HAVE WON", "RESULT");
 
                 }else
                 {
-                    btn.IsEnabled = false;
-                    btn.Background = null;
+                    btn.IsHitTestVisible = false;//disabilito il bottone
+                    btn.Background = Brushes.Red;//colore rosso se non è corretto
 
                     MessageBox.Show("YOU HAVE LOST", "RESULT");
                 }
