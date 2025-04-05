@@ -35,14 +35,11 @@ namespace VERIFICA_TEORIA_DIMASI
 
         public void AggiungiPartita(Partita partita)
         {
-            if (partita.Giocatore1 != giocatori[partita.Giocatore1.Numero])
+            if (partita.Giocatore1.Numero < 0 || partita.Giocatore1.Numero >= giocatori.Length)
                 throw new ArgumentOutOfRangeException("il giocatore1 non esiste");
 
-            if (partita.Giocatore2 != giocatori[partita.Giocatore2.Numero])
+            if (partita.Giocatore2.Numero < 0 || partita.Giocatore2.Numero >= giocatori.Length)
                 throw new ArgumentOutOfRangeException("il giocatore2 non esiste");
-
-            if (partita.Vincitore != giocatori[partita.Vincitore.Numero])
-                throw new ArgumentOutOfRangeException("il vincitore non esiste");
 
             int vincitore = 0;
             int perdente = 0;
@@ -102,9 +99,6 @@ namespace VERIFICA_TEORIA_DIMASI
             if (giocatore.Numero < 0 || giocatore.Numero > giocatori.Length - 1)
                 throw new ArgumentOutOfRangeException("il giocatore non esiste");
 
-            if (giocatore.Equals(giocatori[giocatore.Numero]))
-                throw new ArgumentOutOfRangeException("il giocatore non esiste");
-
             return giocatori[giocatore.Numero].PartiteGiocate;
 
         }
@@ -112,9 +106,6 @@ namespace VERIFICA_TEORIA_DIMASI
         public int PartiteVinteDaGiocatore(Giocatore giocatore)
         {
             if (giocatore.Numero < 0 || giocatore.Numero > giocatori.Length - 1)
-                throw new ArgumentOutOfRangeException("il giocatore non esiste");
-
-            if (giocatore.Equals(giocatori[giocatore.Numero]))
                 throw new ArgumentOutOfRangeException("il giocatore non esiste");
 
             int counter = 0;
@@ -129,9 +120,6 @@ namespace VERIFICA_TEORIA_DIMASI
         public int PartitePerseDaGiocatore(Giocatore giocatore)
         {
             if (giocatore.Numero < 0 || giocatore.Numero > giocatori.Length - 1)
-                throw new ArgumentOutOfRangeException("il giocatore non esiste");
-
-            if (giocatore.Equals(giocatori[giocatore.Numero]))
                 throw new ArgumentOutOfRangeException("il giocatore non esiste");
 
             int counter = 0;

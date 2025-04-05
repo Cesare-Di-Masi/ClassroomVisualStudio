@@ -10,7 +10,10 @@
         public int NAttempt
             { get; set; }
 
-        public Game(int gameSize,int nAttempt) 
+        public bool[,] GameMatrix
+            { get { return gameMatrix; } }
+
+        public Game(int gameSize,int nAttempt, IGenerator? generator = null) 
         {
             if (gameSize < 0)
                 throw new ArgumentException("illegal game size");
@@ -21,22 +24,30 @@
             NAttempt = nAttempt;
             gameMatrix = new bool[gameSize,gameSize];
 
-            Random rnd1 = new Random();
-            Random rnd2 = new Random();
-
-            gameMatrix[rnd1.Next(0, gameSize), rnd2.Next(0, gameSize)] = true;
+            if (generator == null)
+            {
+                Generator gen = new Generator();
+                gen.PlaceMole(gameMatrix);
+            }
+            else
+            {
+                generator.PlaceMole(gameMatrix);
+            }
 
 
         }
 
-        public bool checkGuess(int pos1, int pos2)
+        public GameStatus checkGuess(int pos1, int pos2)
         {
-            if(pos1 < 0 || pos2 < 0)
+            if(pos1 < 0 || pos2 < 0 || pos1 > GameSize || pos2 > GameSize)
                 throw new ArgumentException("illegal given pos");
 
             if (gameMatrix[pos1,pos2] == true)
-                return true;
-            return false;
+                return GameStatus.WON;
+            else if(NAttempt > 1)
+                 return GameStatus.PLAYING;
+            else
+                return GameStatus.LOST;
 
         }
 

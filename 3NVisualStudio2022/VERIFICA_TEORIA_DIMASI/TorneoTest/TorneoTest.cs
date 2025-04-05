@@ -46,8 +46,8 @@ namespace TorneoTest
         [TestMethod]
         public void PartiteDaGiocatore_giocatore_ECorretto()
         {
-            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 1);
-            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 2);
+            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 0);
+            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 1);
             Giocatore[] giocatori = new Giocatore[] { g1, g2 };
             Torneo torneo = new Torneo(giocatori, 5);
             Partita partita = new Partita(g1, g2, g1);
@@ -58,10 +58,10 @@ namespace TorneoTest
         [TestMethod]
         public void PartiteVinteDaGiocatore_giocatore_NonEsiste()
         {
-            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 1);
-            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 2);
+            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 0);
+            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 1);
             Giocatore[] giocatori = new Giocatore[] { g1, g2 };
-            Giocatore g3 = new Giocatore("Giocatore3", DateTime.Now, 300, 3);
+            Giocatore g3 = new Giocatore("Giocatore3", DateTime.Now, 300, 2);
             Torneo torneo = new Torneo(giocatori, 5);
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => torneo.PartiteVinteDaGiocatore(g3));
         }
@@ -69,8 +69,8 @@ namespace TorneoTest
         [TestMethod]
         public void PartiteVinteDaGiocatore_giocatore_ECorretto()
         {
-            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 1);
-            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 2);
+            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 0);
+            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 1);
             Giocatore[] giocatori = new Giocatore[] { g1, g2 };
             Torneo torneo = new Torneo(giocatori, 5);
             Partita partita = new Partita(g1, g2, g1);
@@ -81,10 +81,10 @@ namespace TorneoTest
         [TestMethod]
         public void PartitePerseDaGiocatore_giocatore_NonEsiste()
         {
-            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 1);
-            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 2);
+            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 0);
+            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 1);
             Giocatore[] giocatori = new Giocatore[] { g1, g2 };
-            Giocatore g3 = new Giocatore("Giocatore3", DateTime.Now, 300, 3);
+            Giocatore g3 = new Giocatore("Giocatore3", DateTime.Now, 300, 2);
             Torneo torneo = new Torneo(giocatori, 5);
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => torneo.PartitePerseDaGiocatore(g3));
         }
@@ -92,8 +92,8 @@ namespace TorneoTest
         [TestMethod]
         public void PartitePerse_DaGiocatore_giocatore_ECorretto()
         {
-            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 1);
-            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 2);
+            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 0);
+            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 1);
             Giocatore[] giocatori = new Giocatore[] { g1, g2 };
             Torneo torneo = new Torneo(giocatori, 5);
             Partita partita = new Partita(g1, g2, g2);
@@ -104,8 +104,8 @@ namespace TorneoTest
         [TestMethod]
         public void PunteggiPartiteGiocatori_ECorretto()
         {
-            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 1);
-            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 2);
+            Giocatore g1 = new Giocatore("Giocatore1", DateTime.Now, 100, 0);
+            Giocatore g2 = new Giocatore("Giocatore2", DateTime.Now, 200, 1);
             Giocatore[] giocatori = new Giocatore[] { g1, g2 };
             Torneo torneo = new Torneo(giocatori, 5);
             Partita partita1 = new Partita(g1, g2, g1);
@@ -119,7 +119,7 @@ namespace TorneoTest
             torneo.AggiungiPartita(partita1);
             torneo.AggiungiPartita(partita2);
 
-            Assert.AreEqual(punteggi, torneo.PunteggiPartiteGiocatori(2));
+            CollectionAssert.AreEqual(punteggi, torneo.PunteggiPartiteGiocatori(2));
 
         }
 

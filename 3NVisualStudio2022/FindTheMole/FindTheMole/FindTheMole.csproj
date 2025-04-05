@@ -8,4 +8,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FindTheMole_Lib\FindTheMole_Lib.csproj" />
+  </ItemGroup>
+
 </Project>
