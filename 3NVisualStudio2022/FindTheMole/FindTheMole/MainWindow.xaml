@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label x:Name="lblMainWindow" Content="FIND THE MOLE" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
