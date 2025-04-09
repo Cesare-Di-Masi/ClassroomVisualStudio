@@ -1,0 +1,18 @@
+﻿<Window x:Class="VERIFICA_APRILE_DIMASI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VERIFICA_APRILE_DIMASI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="lblMainWindowTitle" Content="FIND THE TREASURE" HorizontalAlignment="Left" Margin="334,10,0,0" VerticalAlignment="Top" Height="41" Width="186"/>
+        <Label x:Name="lblInsertNAttempts"  Content="Insert Number of Attempts" HorizontalAlignment="Left" Margin="201,119,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnConfirmSettings" Content="Confirm settings (random mode)" HorizontalAlignment="Left" Margin="497,261,0,0" VerticalAlignment="Top" Height="59" Width="185" Click="ConfirmSettings"/>
+        <TextBox x:Name="txtInsertNAttempts" HorizontalAlignment="Left" Margin="427,123,0,0" TextWrapping="Wrap" Text="Write Here" VerticalAlignment="Top" Width="120" GotFocus="RemoveText" LostFocus="GiveText"/>
+        <Button x:Name="btnDeveloperMode" Content="developer mode (alwasy 0,0)" HorizontalAlignment="Left" Margin="30,261,0,0" VerticalAlignment="Top" Height="59" Width="193" Click="btnDeveloperMode_Click"/>
+
+    </Grid>
+</Window>
+    

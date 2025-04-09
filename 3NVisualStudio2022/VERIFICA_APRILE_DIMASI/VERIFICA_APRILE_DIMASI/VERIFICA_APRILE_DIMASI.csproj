@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FindTheMole_Lib\FindTheMole_Lib.csproj" />
+    <ProjectReference Include="..\LibVERIFICA_APRILE_DIMASI\LibVERIFICA_APRILE_DIMASI.csproj" />
   </ItemGroup>
 
 </Project>

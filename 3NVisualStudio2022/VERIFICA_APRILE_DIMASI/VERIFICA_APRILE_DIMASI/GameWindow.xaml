@@ -1,0 +1,43 @@
+﻿<Window x:Class="VERIFICA_APRILE_DIMASI.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VERIFICA_APRILE_DIMASI"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="600" Width="600">
+    <Grid>
+        <Button Content="00" HorizontalAlignment="Left" Margin="76,59,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="01" HorizontalAlignment="Left" Margin="178,59,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="02" HorizontalAlignment="Left" Margin="284,59,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="03" HorizontalAlignment="Left" Margin="386,59,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="04" HorizontalAlignment="Left" Margin="485,59,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="10" HorizontalAlignment="Left" Margin="76,136,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="11" HorizontalAlignment="Left" Margin="178,136,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="12" HorizontalAlignment="Left" Margin="284,136,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="13" HorizontalAlignment="Left" Margin="386,136,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="14" HorizontalAlignment="Left" Margin="485,136,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="20" HorizontalAlignment="Left" Margin="76,215,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="21" HorizontalAlignment="Left" Margin="178,215,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="22" HorizontalAlignment="Left" Margin="284,215,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="23" HorizontalAlignment="Left" Margin="386,215,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="24" HorizontalAlignment="Left" Margin="485,215,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="30" HorizontalAlignment="Left" Margin="76,292,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="31" HorizontalAlignment="Left" Margin="178,292,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="32" HorizontalAlignment="Left" Margin="284,292,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="33" HorizontalAlignment="Left" Margin="386,292,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="34" HorizontalAlignment="Left" Margin="485,292,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="40" HorizontalAlignment="Left" Margin="76,370,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="41" HorizontalAlignment="Left" Margin="178,370,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="42" HorizontalAlignment="Left" Margin="284,370,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="43" HorizontalAlignment="Left" Margin="386,370,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Button Content="44" HorizontalAlignment="Left" Margin="485,370,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="TryAttempt"/>
+        <Label Content="Attempts left:" HorizontalAlignment="Left" Margin="138,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Attempts done:" HorizontalAlignment="Left" Margin="309,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAttemptsLeft" Content="0" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAttemptsDone" Content="0" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="Return to main" HorizontalAlignment="Left" Margin="259,456,0,0" VerticalAlignment="Top" Click="ReturnToMain" Height="56" Width="96"/>
+
+
+    </Grid>
+</Window>
