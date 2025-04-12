@@ -14,6 +14,7 @@
         <TextBox x:Name="txtWriteYourMessage" HorizontalAlignment="Left" Margin="370,116,0,0" TextWrapping="Wrap" Text="Write here" VerticalAlignment="Top" Width="120" GotFocus="removeText" LostFocus="giveText"/>
         <TextBox x:Name="txtWriteYourKey" HorizontalAlignment="Left" Margin="370,172,0,0" TextWrapping="Wrap" Text="Write here" VerticalAlignment="Top" Width="120" GotFocus="removeText" LostFocus="giveText"/>
         <Button Content="Code" HorizontalAlignment="Left" Margin="364,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.567,0.081" Height="44" Width="132" Click="CodeMessage"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="34,307,0,0" VerticalAlignment="Top" Height="74" Width="144" Click="Button_Click"/>
 
     </Grid>
 </Window>

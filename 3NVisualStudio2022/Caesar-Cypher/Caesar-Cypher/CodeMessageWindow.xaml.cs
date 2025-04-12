@@ -20,6 +20,8 @@ namespace Caesar_Cypher
     /// </summary>
     public partial class CodeMessageWindow : Window
     {
+        CypherCode cypherCode;
+
         public CodeMessageWindow()
         {
             InitializeComponent();
@@ -47,27 +49,29 @@ namespace Caesar_Cypher
         {
             try
             {
-                if(txtWriteYourMessage.Text.Length == 0 || txtWriteYourKey.Text.Length != 0)
-                {
-                    throw Exception("Please insert a message and a key");
-                }
+                string message = txtWriteYourMessage.Text;
+                int key = int.Parse(txtWriteYourKey.Text);
 
-            }catch(Exception ex)
+                cypherCode = new CypherCode(message, key);
+
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
                 return;
             }
 
-
-            string message = txtWriteYourMessage.Text;
-            char key = txtWriteYourKey.Text[0];
-
-            CypherCode cypherCode = new CypherCode(message,key);
-
             string codedMessage = cypherCode.codeMessage();
 
-            lblCodedMessage.Content = "Coded message: " + codedMessage;
+            lblCodedMessage.Content = codedMessage;
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
